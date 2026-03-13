@@ -11,8 +11,9 @@ public class PlayerController : MonoBehaviour
         movement = GetComponent<PlayerMovement>();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         movement.Move(input.MoveInput);
+        movement.Jump();
     }
 }
